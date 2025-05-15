@@ -1,0 +1,13 @@
+
+:root{
+  --fontsize-primary: 1.6rem;
+  --fontsize-secondary: 1.4rem;
+
+  --background-color-a: rgb(54, 54, 54);
+  --background-color-b: rgb(49, 49, 49);
+  --background-test: green;
+
+
+  --text-color-primary: white;
+  ;
+}
