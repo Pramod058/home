@@ -10,6 +10,7 @@ body{
 .maincontainer{
   background-color: var(--background-color-b);
   width: 800px;
+  min-height: 500px;
   height: auto;
   color: var(--text-color-primary);
   font-size: var(--fontsize-primary);
