@@ -32,9 +32,9 @@
 
 
 .other-details {
-  background-color: var(--background-color-a);  padding-left: 16px;
+  background-color: var(--background-color-a); 
+  padding: 16px;
   border-top: 3px solid var(--background-color-c);
-  margin-top: 8px;
   border-radius: 4px;
 }
 
@@ -53,21 +53,8 @@
   animation: expand 0.3s ease;
 }
 
-ul{
-  list-style: none;
-  padding: 0;
-}
-
-li strong{
-  font-weight: 50;
-}
-
 
 .certificate-image {
-  max-width: 200px;
-  max-height: 150px;
-  margin-top: 8px;
-  border-radius: 4px;
-  display: block;
-  margin-bottom: 12px;
+  height: auto;
+  width: 100%;
 }

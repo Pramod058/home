@@ -3,16 +3,15 @@
         "title": "Omdena’s Capacity Building Program with NIC Nepal",
         "issuer": "Omdena",
         "date": "ongoing",
-        "imagelink": "https://www.coursera.org/account/accomplishments/certificate/TZ2EF7WR47CD",
+        "imagelink": "none",
         "poweredby": "Omdena - National Innovation Center"
-
     },
 
     {
         "title": "AI for Everyone",
         "issuer": "Coursera",
         "date": "2020",
-        "imagelink": "https://www.coursera.org/account/accomplishments/certificate/TZ2EF7WR47CD",
+        "imagelink": "/assets/certificates/ai_for_everyone.jpg",
         "poweredby": "DeepLearning.AI"
     },
 
@@ -20,7 +19,7 @@
         "title": "Python for Everybody (Specialization)",
         "issuer": "Coursera",
         "date": "2020",
-        "imagelink": "https://www.coursera.org/account/accomplishments/specialization/certificate/S3JMJ7ZL4UMY",
+        "imagelink": "/assets/certificates/python_for_everybody.jpg",
         "poweredby": "University of Michigan"
     },
 
@@ -28,7 +27,7 @@
         "title": "Programming for Everybody (Getting started with python",
         "issuer": "Coursera",
         "date": "2020",
-        "imagelink": "https://www.coursera.org/account/accomplishments/certificate/PE8PH9ALTXTV",
+        "imagelink": "/assets/certificates/prog_for_everybody.jpg",
         "poweredby": "University of Michigan"
 
     },
@@ -37,15 +36,17 @@
         "title": "Technical Support Fundamental",
         "issuer": "Coursera",
         "date": "2020",
-        "imagelink": "https://www.coursera.org/account/accomplishments/certificate/2HE7HJAV77QH",
+        "imagelink": "/assets/certificates/tech_support_fundamental.jpg",
         "poweredby": "Google"
     },
+
+
 
     {
         "title": "The Bits and Bytes of Computer Networking",
         "issuer": "Coursera",
         "date": "2020",
-        "imagelink": "https://www.coursera.org/account/accomplishments/certificate/7H5ZS6FUEM36",
+        "imagelink": "/assets/certificates/cn_bits_and_bytes.jpg",
         "poweredby": "Google"
     }
 ]

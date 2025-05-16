@@ -21,25 +21,13 @@ function Certification() {
           </button>
           {expandedIndex === index && (
             <div className="other-details">
-              <ul>
-                <li>Issuer: {certificate.issuer}</li>
-                <li>Date: {certificate.date}</li>
-                <li>Powered by: {certificate.poweredby}</li>
-                {certificate.imagelink !== 'none' && (
-                  <li>
-                    <strong>Certificate Link:</strong> 
-                    <a href={certificate.imagelink} target="_blank" rel="noopener noreferrer">
-                      View Certificate
-                    </a>
-                  </li>
-                )}
-                {certificate.imagelink !== 'none' && (
-                  <li>
-                    <strong>Certificate Image:</strong>
-                    <img src={certificate.imagelink} alt="Certificate" className="certificate-image" />
-                  </li>
-                )}
-              </ul>
+
+              {certificate.imagelink === 'none' ? (
+                <p style={{ fontStyle: 'italic', color: 'red' }}> ❌ Either ongoing course or it's unavailable</p>
+              ) : (
+                <img src={certificate.imagelink} alt={certificate.title} className="certificate-image" />
+              )}
+
             </div>
           )}
         </div>
@@ -49,3 +37,5 @@ function Certification() {
 }
 
 export default Certification;
+
+
