@@ -1,0 +1,38 @@
+.home-wrapper {
+    padding: 20px;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.icon {
+  font-size: 2rem; 
+  transition: transform 0.3s ease;
+}
+
+.linkedin {
+  color: #0077b5;
+  
+}
+
+.github {
+  color: #171515;
+}
+
+.icon:hover {
+  transform: scale(1.1); }
+
+.divider {
+  height: 32px;
+  width: 1.5px;
+  background-color: #ccc;
+}

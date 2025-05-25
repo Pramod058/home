@@ -7,6 +7,7 @@ body{
   padding: 0px;
 }
 
+
 .maincontainer{
   background-color: var(--background-color-b);
   width: 800px;
@@ -53,6 +54,7 @@ body{
   outline: none;
   box-shadow: 0px 5px 10px rgba(254, 125, 125, 0.2);
 }
+
 
 
 

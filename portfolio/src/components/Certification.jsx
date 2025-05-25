@@ -23,7 +23,7 @@ function Certification() {
             <div className="other-details">
 
               {certificate.imagelink === 'none' ? (
-                <p style={{ fontStyle: 'italic', color: 'red' }}> ❌ Either ongoing course or it's unavailable</p>
+                <p> Ongoing course</p>
               ) : (
                 <img src={certificate.imagelink} alt={certificate.title} className="certificate-image" />
               )}
