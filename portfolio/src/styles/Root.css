@@ -1,14 +1,45 @@
+:root {
+  --color-background: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-text-primary: #212529;
+  --color-text-secondary: #6c757d;
+  --color-accent: #007bff;
+  --color-border: #dee2e6;
 
-:root{
-  --fontsize-primary: 1.6rem;
-  --fontsize-secondary: 1.4rem;
+  --font-heading: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 
-  --background-color-a: rgb(54, 54, 54);
-  --background-color-b: rgb(49, 49, 49);
-  --background-test: green;
-  --background-color-c: rgba(254, 125, 125, 0.2);
+  --border-radius: 8px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
 
+html[data-theme="dark"] {
+  --color-background: #121212;
+  --color-surface: #1e1e1e;
+  --color-text-primary: #eaeaea;
+  --color-text-secondary: #a0a0a0;
+  --color-accent: #007bff;
+  --color-border: #333333;
 
-  --text-color-primary: white;
-  ;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
 }

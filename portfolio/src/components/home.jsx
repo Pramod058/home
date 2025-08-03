@@ -1,51 +1,44 @@
+import { Link } from 'react-router-dom';
+import { FaLinkedin, FaGithub, FaReact, FaPython, FaDocker, FaGitAlt, FaJs, FaCuttlefish } from 'react-icons/fa';
+import { SiPandas, SiNumpy, SiDjango, SiStreamlit } from 'react-icons/si';
 import '../styles/Home.css';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
-
+import { data } from '../data/portfolioData';
 
 function Home() {
+    const { name, titles, location, phone, linkedin, github, profilePicture } = data.personalInfo;
+    const allSkills = [...data.skills.programming, ...data.skills.libraries, ...data.skills.frameworks, ...data.skills.tools];
+
     return (
-        <div className='home-wrapper'>
-            <div className='home-container'>
-                <h1>Pramod Aryal</h1>
-                <p></p>
-                <p>+977-9816069759 <br></br>
-                    <a href='mailto:aryalpramod05@gmail.com'>aryalpramod05@gmail.com</a> <br></br>
-                    📖 Bachelors Degree in Information Technology <br></br>
-                    🎓 Constantly learning and researching AI/ML. <br></br>
-                </p>
+        <section className="home-hero-section">
+            <div className="section-container hero-container">
+                <div className="hero-text">
+                    <h1 className='home-name'>{name}</h1>
+                    <div className='home-titles'>
+                        {titles.map(title => <span key={title} className="title-tag">{title}</span>)}
+                    </div>
+                    <div className="contact-details">
+                        <p>{location}</p>
+                        <p>{phone}</p>
+                    </div>
+                    <div className="home-socials">
+                        <a href={linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className='social-link'><FaLinkedin /></a>
+                        <a href={github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className='social-link'><FaGithub /></a>
+                    </div>
+                    <Link to="/project" className='action-button primary'>View My Projects</Link>
+                </div>
+                <div className="hero-image-container">
+                    <img src={profilePicture} alt={name} className="profile-picture" />
+                </div>
             </div>
-
-            <div className="social-container">
-                Connect with me </div>
-
- 
-<div className="social-icons">
-  <div id="linkedin">
-    <a
-      href="https://www.linkedin.com/in/pramod058"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <FaLinkedin className="icon linkedin" />
-    </a>
-  </div>
-
-  <div className="divider"></div>
-
-  <div id="github">
-    <a
-      href="https://github.com/pramod058"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <FaGithub className="icon github" />
-    </a>
-  </div>
-</div>
-
-
-        </div>
-    )
+            <div className="tech-marquee">
+                <div className="tech-icons-group">
+                    <FaPython title="Python"/><FaJs title="JavaScript"/><FaReact title="React"/><SiDjango title="Django"/><SiStreamlit title="Streamlit"/><FaDocker title="Docker"/><FaGitAlt title="Git"/><SiPandas title="Pandas"/><SiNumpy title="Numpy"/><FaCuttlefish title="C++/C"/>
+                </div>
+                <div className="tech-icons-group">
+                     <FaPython title="Python"/><FaJs title="JavaScript"/><FaReact title="React"/><SiDjango title="Django"/><SiStreamlit title="Streamlit"/><FaDocker title="Docker"/><FaGitAlt title="Git"/><SiPandas title="Pandas"/><SiNumpy title="Numpy"/><FaCuttlefish title="C++/C"/>
+                </div>
+            </div>
+        </section>
+    );
 }
-
 export default Home;

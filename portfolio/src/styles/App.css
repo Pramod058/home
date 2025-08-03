@@ -1,89 +1,55 @@
-body{
-  background-color: var(--background-color-a);
+.app-wrapper {
   display: flex;
-  justify-content: center; 
-  align-items: flex-start;
-  margin: 0px;
-  padding: 0px;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex-grow: 1;
+  width: 100%;
 }
 
 
-.maincontainer{
-  background-color: var(--background-color-b);
-  width: 800px;
-  min-height: 500px;
-  height: auto;
-  color: var(--text-color-primary);
-  font-size: var(--fontsize-primary);
-  border: 1px solid;
-  border-radius: 10px;
-  box-shadow: inset;
+.section-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--color-text-primary);
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-accent-primary);
+  border-radius: 2px;
 }
 
 
-
-.navbar {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  border-radius: 10px; 
-  box-shadow: 0px 4px 6px rgba(254, 125, 125, 0.2);
+html[data-theme='dark'] .page-title::after {
+    background-color: var(--color-accent-secondary);
 }
-
-.navbar button {
-  background: none;
-  border: none;
-  color: var(--text-color-primary);
-  font-size: 1.1rem;
-  cursor: pointer;
-  padding: 10px 20px;
-  transition: all 0.3s ease-in-out;
-  text-transform: uppercase;
-}
-
-.navbar button:hover {
-  color: var(--text-color-primary);
-  border-radius: 10px;
-  transform: translateY(-3px); 
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.navbar button:focus {
-  outline: none;
-  box-shadow: 0px 5px 10px rgba(254, 125, 125, 0.2);
-}
-
-
-
 
 @media screen and (max-width: 768px) {
-  .maincontainer {
-    width: 95%;
-    min-height: auto;
-    padding: 15px;
-    font-size: calc(var(--fontsize-primary) * 0.95); /* Slight scale down */
-    border-radius: 8px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 12px;
-  }
-
-  .navbar button {
-    width: 100%;
-    text-align: left;
-    padding: 10px 12px;
-    font-size: 1rem;
-    border-radius: 6px;
-  }
-
-  body {
-    align-items: stretch; /* Ensure full width alignment */
+  .page-title {
+    font-size: 2rem;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .section-container {
+    padding: 3rem 1rem;
+  }
+}

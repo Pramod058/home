@@ -1,0 +1,25 @@
+.projects-section {
+  background-color: var(--color-background);
+  width: 100%;
+}
+
+html[data-theme="dark"] .projects-page-title::after {
+  background-color: var(--color-accent-secondary);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+  row-gap: 5rem;
+  column-gap: 2rem;
+}
+
+@media screen and (max-width: 850px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects-page-title {
+    font-size: 2rem;
+  }
+}

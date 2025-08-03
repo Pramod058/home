@@ -1,41 +1,27 @@
-import { useState } from 'react';
 import '../styles/Certification.css';
-import certificates from '../data/certificates.json';
+import { data } from '../data/portfolioData';
 
 function Certification() {
-  const [expandedIndex, setExpandedIndex] = useState(null);
-
-  const toggleExpand = (index) => {
-    setExpandedIndex(prev => (prev === index ? null : index));
-  };
-
   return (
-    <div className='certificate-wrapper'>
-      {certificates.map((certificate, index) => (
-        <div className="certificate-container" key={index}>
-          <button
-            className="certificate-button"
-            onClick={() => toggleExpand(index)}
-          >
-            {certificate.title}
-          </button>
-          {expandedIndex === index && (
-            <div className="other-details">
-
-              {certificate.imagelink === 'none' ? (
-                <p> Ongoing course</p>
-              ) : (
-                <img src={certificate.imagelink} alt={certificate.title} className="certificate-image" />
-              )}
-
+    <section className="certification-section">
+      <div className="section-container">
+        <h1 className="page-title">Licenses & Certifications</h1>
+        <div className='certifications-grid'>
+          {data.certifications.map((cert, index) => (
+            <div className="cert-card" key={index}>
+              <a href={cert.image} target="_blank" rel="noopener noreferrer" className="cert-image-link">
+                <img src={cert.image} alt={cert.title} className="cert-image" />
+              </a>
+              <div className="cert-text-content">
+                <h3 className="cert-title">{cert.title}</h3>
+                <p className="cert-issuer">{cert.issuer} · {cert.status}</p>
+              </div>
             </div>
-          )}
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </section>
   );
 }
 
 export default Certification;
-
-
