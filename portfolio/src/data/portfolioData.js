@@ -7,10 +7,11 @@ export const data = {
     phone: "+977 9816069759",
     linkedin: "https://www.linkedin.com/in/pramod58",
     github: "https://github.com/Pramod058",
+    whatsapp: "https://wa.me/9779816069759",
     profilePicture: "assets/profile.png", // Add a square image named profile.png to your /public folder
   },
   skills: {
-    programming: ["Python", "JavaScript", "C++", "C"],
+    programming: ["Python", "JavaScript", "TypeScript", "C++", "C"],
     libraries: [
       "Pandas",
       "Numpy",
@@ -20,8 +21,17 @@ export const data = {
       "Sklearn",
       "Streamlit",
     ],
-    frameworks: ["React.js", "Django"],
-    tools: ["Git", "GitHub", "VS Code", "Jupyter", "Docker", "Trello"],
+    frameworks: ["React.js", "NestJS", "Django"],
+    tools: [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Jupyter",
+      "Docker",
+      "PostgreSQL",
+      "Supabase",
+      "Trello",
+    ],
   },
   experience: [
     {
